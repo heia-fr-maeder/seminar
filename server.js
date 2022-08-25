@@ -213,22 +213,12 @@ console.log(`${socket.id} enters room "${rooms[i].venue}|${rooms[i].name}|${room
 		}
 
 		const user = getUser(socket.id);
-<<<<<<< HEAD
-		console.log('Mike logging');
-		console.log(`${user.id}`);
-		console.log(`${hosts[i][0].id}`);
-//		const chair = false;
-//		if (user !== undefined) {
-		const	chair = ( user.id == hosts[i][0].id );
-//		}
-=======
 		if ( !user ) {
 			callback("User not found!");
 			return false;
 		}
 
 		const chair = ( user.id == hosts[i][0].id );
->>>>>>> c0ab11126f42c910760fe51a09662ede6ac73ae6
 		// remove user from hosts
 		const h = hosts[i].findIndex(host => host.id === user.id);
 		if (h !== -1) {
